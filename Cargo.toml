@@ -1,0 +1,11 @@
+[package]
+name = "struct-formatter"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "3.0.13", features = ["derive"] }
+to_trait = { version = "0.1.1", default-features = false }
+
+[dev-dependencies]
+assert_cmd = { version = "2.0.4", default-features = false }
