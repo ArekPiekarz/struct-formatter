@@ -8,12 +8,11 @@ fn shouldFail_andPrintShortHelp_whenNoInputTextIsProvided()
 {
     let error =
 "error: The following required arguments were not provided:
-    <TEXT>
+  <TEXT>
 
-USAGE:
-    struct-formatter [OPTIONS] <TEXT>
+Usage: struct-formatter <TEXT>
 
-For more information try --help
+For more information try '--help'
 ";
     assert_cmd::Command::cargo_bin(APP_NAME).unwrap().assert().failure().stderr(error);
 }
