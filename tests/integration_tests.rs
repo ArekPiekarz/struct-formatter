@@ -7,12 +7,12 @@ const APP_NAME: &str = env!("CARGO_PKG_NAME");
 fn shouldFail_andPrintShortHelp_whenNoInputTextIsProvided()
 {
     let error =
-"error: The following required arguments were not provided:
+"error: the following required arguments were not provided:
   <TEXT>
 
 Usage: struct-formatter <TEXT>
 
-For more information try '--help'
+For more information, try '--help'.
 ";
     assert_cmd::Command::cargo_bin(APP_NAME).unwrap().assert().failure().stderr(error);
 }
